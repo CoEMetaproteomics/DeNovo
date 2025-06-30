@@ -1,0 +1,29 @@
+~/diamond-2.1.11/bin/diamond blastp \
+    --db ~/databases/nr/nr.dmnd \
+    --query novoMP_peptides_For_BlastP.fasta \
+    --out novoMP_peptides_blastp_output.tsv \
+    --outfmt 6 qseqid full_qseq sseqid pident nident length mismatch gapopen qstart qend sstart send score evalue bitscore staxids sscinames skingdoms salltitles \
+    --evalue 20000 \
+    --max-target-seqs 5 \
+    --threads 10 \
+    --ultra-sensitive \
+    --taxonlist 2,4751,2157,10239 \
+    --block-size 12 \
+    --matrix PAM30 \
+    --tmpdir /tmp
+
+
+
+~/diamond-2.1.11/bin/diamond blastp \
+    --db ~/databases/nr/nr.dmnd \
+    --query novoMP_peptides_For_BlastP.fasta \
+    --out novoMP_peptides_blastp_output_LCA.tsv \
+    --outfmt 102 \
+    --evalue 20000 \
+    --max-target-seqs 5 \
+    --threads 10 \
+    --ultra-sensitive \
+    --taxonlist 2,4751,2157,10239 \
+    --block-size 12 \
+    --matrix PAM30 \
+    --tmpdir /tmp
